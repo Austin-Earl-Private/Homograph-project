@@ -15,9 +15,9 @@ def userInputTests():
    result = runTest(homoTestString1, homoTestString2) 
    #print result to users
    if result:
-      print("These Two Paths Are Homographs")
+      print("These Two Paths Are Homographs\n")
    else:
-      print("These Two Paths Are NOT Homographs")
+      print("These Two Paths Are NOT Homographs\n")
 
 """
 Contains both the string sets and logic to run thorugh multiple
@@ -37,18 +37,18 @@ def runPremadeTestCases():
       #using i to get element 0 starting at the front of the list and length - (i + 1) to get the end of the list
       result = runTest(homographStrings[i], homographStrings[len(homographStrings)-(i+1)])
       if result:
-         print("These Two Paths Are Homographs")
+         print("These Two Paths Are Homographs\n")
       else:
-         print("These Two Paths Are NOT Homographs")
+         print("These Two Paths Are NOT Homographs\n")
 
    #loop through non-homograph tests
    for i in range(0, len(nonHomographStrings)):
       #using i to get element 0 of both homographString and nonHomographStrings
       result = runTest(homographStrings[i], nonHomographStrings[i])
       if result:
-         print("These Two Paths Are Homographs")
+         print("These Two Paths Are Homographs\n")
       else:
-         print("These Two Paths Are NOT Homographs")
+         print("These Two Paths Are NOT Homographs\n")
 """  
 Test runner invoking other classes to run through canonicalization and homograph tests
 """
