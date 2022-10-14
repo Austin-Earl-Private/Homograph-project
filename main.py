@@ -1,7 +1,7 @@
 from pydoc import doc
 import os
 import homograph
-#import canonicalization
+import clean_string
 
 """  
 Retrieves user input running them through canonicalization
@@ -50,13 +50,14 @@ def runPremadeTestCases():
          print("These Two Paths Are Homographs\n")
       else:
          print("These Two Paths Are NOT Homographs\n")
+
 """  
 Test runner invoking other classes to run through canonicalization and homograph tests
 """
 def runTest(homoTestString1, homoTestString2):
    #canonicalize use inputs cleansing them for homograph test
-   #homoTestString1 = CANONICALIZE(homoTestString1)
-   #homoTestString2 = CANONICALIZE(homoTestString2)
+   homoTestString1 = clean_string.clean_string(homoTestString1)
+   homoTestString2 = clean_string.clean_string(homoTestString2)
    #prepend CWD to strings
    homoTestString1 = os.getcwd() + homoTestString1
    homoTestString2 = os.getcwd() + homoTestString2
