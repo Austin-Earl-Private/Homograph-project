@@ -25,6 +25,7 @@ set of tests showing homographs and non-homograph sets.
 These test sets are all arbitrary and don't take into account the users system.
 """
 def runPremadeTestCases():
+   #arbitrary working directory for proof of concept
    cwd = "\\home\\cse453\\week05\\"
    #all strings within will be homographs to strings within homographStrings list (this list should be longer than non homograph list)
    homographStrings = [f"{cwd}test.txt", f"{cwd}.\\test.txt", f"{cwd}../../../../../../home/cse453/week05/test.txt",
